@@ -1,0 +1,339 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: #1d1d1d;
+}
+
+header{
+}
+
+header .bg-image{
+    background: url("../resources/HeaderBackground.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    /*animation-name: loaded-image;
+    animation-duration: 1s;
+    animation-delay: 1ms;
+    animation-direction: normal;
+    animation-fill-mode: both;
+    */
+}
+
+header .image-wrapper{
+    background:
+            linear-gradient(to bottom, rgba(10,19,10,0), rgba(10,19,10,1)),
+            linear-gradient(to top, rgba(10,19,10,0), rgba(10,19,10,1));
+    height: 103vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+/* @keyframes loaded-image{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+*/
+
+
+header .bg-image .image-wrapper h1{
+    color: #fff;
+    position: relative;
+    text-align: center;
+    top: 20%;
+    font-size: 50px;
+}
+
+header .bg-image .image-wrapper p{
+    color: #fff;
+    text-align: center;
+    position: relative;
+    top: 20%;
+    letter-spacing: 2px;
+    line-height: 1.8em;
+    margin: 0 50px 0 50px;
+    font-family: Roboto;
+    padding: 20px 100px;
+}
+
+/* body{
+    margin-top:20px;
+    background: #1d1d1d;
+}
+ */
+
+/*panel*/
+.panel {
+    border: none;
+    box-shadow: none;
+}
+
+.panel-heading {
+    border-color:#eff2f7 ;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.panel-title {
+    color: #2A3542;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 0;
+    margin-top: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.transparent-menu {
+    list-style-type: none;
+    padding: 0;
+    margin-left: 36%;
+    margin-top: 100px;
+    justify-content: center;
+}
+
+.transparent-menu li {
+    color: white;
+    padding: 15px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.transparent-menu li:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.transparent-menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+/*.transparent-menu a:hover {
+    color: #5bb7ff;
+    text-shadow: 0 0 5px #5bb7ff, 0 0 10px #5bb7ff, 0 0 15px #5bb7ff, 0 0 20px #5bb7ff;
+}*/
+
+/*.input-box {
+    list-style-type: none;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: flex;
+    margin-left: 40%;
+    margin: 10px;
+}
+
+.input-box:hover {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}*/
+
+.input-box-position-container {
+    margin-left: 40%;
+    margin-top: 100px;
+}
+
+.input-box {
+    color: white;
+    width: 300px;
+    padding: 10px;
+    font-size: 16px;
+    margin: 13px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: all 1s ease;
+    display: flex;
+    background-color: transparent;
+}
+
+.input-box:hover {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transform: scale(1.1);
+    transition: color 1s ease;
+    animation: zoomIn 1s forwards;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,800);
+
+*, *:before, *:after{
+    box-sizing: border-box;
+    padding: 0; margin: 0;
+    font: 300 1em/1.5 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+html, body{background: rgb(236, 240, 241);}
+
+section.container{
+    min-width: 500px;
+    margin: 10% auto;
+    text-align: center;
+}
+
+.SignUpButton:hover{cursor: pointer}
+.SignUpButton {
+    background: transparent; outline: none;
+    position: relative;
+    margin-left: 45%;
+    margin-top: 100px;
+    border: 2px solid #48c7ba;
+    padding: 15px 50px;
+    overflow: hidden;
+}
+
+/*button:before (attr data-hover)*/
+.SignUpButton:hover:before{opacity: 1; transform: translate(0,0);}
+.SignUpButton:before{
+    content: attr(data-hover);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 800;
+    font-size: .8em;
+    opacity: 0;
+    transform: translate(-100%,0);
+    transition: all .3s ease-in-out;
+}
+/*button div (button text before hover)*/
+.SignUpButton:hover div{opacity: 0; transform: translate(100%,0)}
+.SignUpButton div {
+    position: absolute;
+    top: 0;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 800;
+    font-size: .8em;
+    transition: all .3s ease-in-out;
+    opacity: 1;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&display=swap');
+* {
+    font-family: "Quicksand", sans-serif;
+}
+section {
+    max-width: 1180px;
+    margin: 0 auto;
+}
+h1 {
+    color: #000000;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 0.5rem;
+    text-transform: uppercase;
+    margin: 4rem 0 0 0;
+}
+.list {
+    background: #3d4648;
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 5rem 0;
+}
+.list > .product {
+    width: 200px;
+    float: left;
+    height: 300px;
+    background: #3c4242;
+    margin: 1%;
+    position: relative;
+}
+.product > div {
+    text-align: center;
+    position: absolute;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    bottom: 0;
+    height: 0;
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+    border-radius:4px;
+}
+.product:hover > div {
+    position: absolute;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.5);
+}
+.product > img {
+    margin: 0 auto;
+    height: 300px;
+    width: 200px;
+    display: block;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    border-radius:4px;
+}
+.product:hover > img {
+    -webkit-filter: blur(3px) saturate(1.5);
+    filter: blur(3px) saturate(1.5);
+}
+.product > div > h2 {
+    color: #000000;
+    border-bottom: 1px solid #818181;
+    padding: 0 0 1rem;
+}
+.descr {
+    color: #000000;
+    font-size: 0.8rem;
+    padding: 2rem;
+    line-height: 1.2rem;
+    font-weight:600;
+}
+.product > div > a > p {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1rem;
+    line-height: 2.4rem;
+    background: #000;
+    color: #fff;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    margin: 0 auto !important;
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+.product > div > a > p:hover {
+    filter:brightness(.9);
+    letter-spacing: 4px;
+}
+
+.site-footer
+{
+    height: 400px;
+    background-color:#26272b;
+    padding:45px 0 20px;
+    font-size:15px;
+    line-height:24px;
+    color:#737373;
+}
